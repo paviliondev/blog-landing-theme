@@ -1,9 +1,7 @@
 {
   "name": "Blog Landing Theme",
-  "about_url": null,
-  "license_url": null,
-  "assets": {
-  },
-  "color_schemes": {
-  }
+  "about_url": "https://thepavilion.io/c/knowledge/discourse/landing-pages",
+  "license_url": "https://github.com/paviliondev/blog-landing-theme/blob/master/LICENSE.txt",
+  "assets": {},
+  "color_schemes": {}
 }
