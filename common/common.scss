@@ -147,6 +147,12 @@ body.blog {
   .blog-title {
     text-align: center;
     padding: 0 1em;
+
+    h3 {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 
   > .contents {
