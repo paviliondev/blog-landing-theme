@@ -72,4 +72,17 @@ body.landing-page {
       }
     }
   }
+
+  &.blog,
+  &.blog-post {
+    .btn-fixed {
+      padding: 0;
+
+      .fixed-avatar,
+      .fixed-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
 }
