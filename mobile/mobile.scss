@@ -14,12 +14,6 @@ body.landing-page {
     .topic-list {
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
       padding: 2em 0 0 0;
-
-      .topic-byline {
-        .bull {
-          padding: .2em .5em;
-        }
-      }
     }
   }
 
@@ -45,13 +39,15 @@ body.landing-page {
         text-align: center;
         margin: 0 0 1em 0;
       }
+    }
 
-      .topic-byline {
-        flex-direction: column;
+    .topic-byline {
+      justify-content: center;
 
-        .bull {
-          padding: .2em 1em;
-        }
+      .link {
+        flex: 100%;
+        justify-content: center;
+        margin-top: 0.75em;
       }
     }
 

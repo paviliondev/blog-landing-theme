@@ -1,32 +1,35 @@
 <script>
-window.addEventListener('DOMContentLoaded', (event) => {
-  var $blog = $('body.blog, body.blog-post');
-  var $subscribeModal = $blog.find(".modal.subscribe");
-  var $subscribeBtn = $blog.find(".btn-subscribe");
+  window.addEventListener("DOMContentLoaded", (event) => {
+    var blog = document.querySelector("body.blog, body.blog-post");
+    var subscribeModal = blog.querySelector(".modal.subscribe");
+    var subscribeBtn = blog.querySelector(".btn-subscribe");
 
-  $blog.find($subscribeBtn).on('click', function(e) {
-    if ($(this).hasClass('user')) {
-      $subscribeModal.addClass("active");
-    } else {
-      window.location.href = '/login'
+    if (subscribeBtn) {
+      subscribeBtn.addEventListener("click", (e) => {
+        if (subscribeBtn.classList.contains("user")) {
+          subscribeModal.classList.add("active");
+        } else {
+          window.location.href = '/login'
+        }
+      });
     }
-  });
 
-  $subscribeModal.find(".modal.subscribe .modal-close").on('click', function(e) {
-    $subscribeModal.removeClass("active");
-  });
-
-  $blog.on('click', function(e) {
-    if ($(e.target).closest(".modal.subscribe .modal-content, .btn-subscribe").length == 0) {
-      $subscribeModal.removeClass("active");
+    if (subscribeModal) {
+      subscribeModal.querySelector(".modal-close").addEventListener("click", (e) => {
+        subscribeModal.classList.remove("active");
+      });
     }
-  });
 
-  $blog.find('.canvas p').each(function() {
-    let $this = $(this);
-    if ($this.html().replace(/\s|&nbsp;/g, '').length == 0) {
-      $this.remove();
-    }
+    blog.addEventListener("click", (e) => {
+      if (e.target.closest(".modal.subscribe .modal-content, .btn-subscribe") == null) {
+        subscribeModal.classList.remove("active");
+      }
+    });
+
+    blog.querySelectorAll(".canvas p").forEach((el) => {
+      if (!el.innerHTML.replace(/\s|&nbsp;/g, '')) {
+        el.remove();
+      }
+    });
   });
-});
 </script>

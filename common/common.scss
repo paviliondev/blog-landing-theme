@@ -12,7 +12,7 @@ body.blog-post {
 
   a {
     text-decoration: none;
-    color: $primary;
+    color: $tertiary;
   }
 
   .btn {
@@ -315,7 +315,7 @@ body.blog-post {
   }
 
   .title-container {
-    background-color: $tertiary;
+    background: $tertiary no-repeat center/cover;
     display: flex;
     flex-direction: column;
     min-height: 600px;
@@ -453,6 +453,7 @@ body.blog-post {
     word-spacing: 0.25em;
     display: flex;
     flex-direction: column;
+    min-width: 100%;
 
     p:last-of-type {
       margin-bottom: 0;
